@@ -16,7 +16,7 @@ from .serializers import BookSerializer
 #     serializer_class = BookSerializer
 
 class BookListAPIView(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         books = Book.objects.all()
@@ -39,7 +39,7 @@ class BookDetailAPIView(generics.RetrieveDestroyAPIView):
 
 
 class BookDeleteAPIView(APIView):
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
     def delete(self, requests, pk):
         book = Book.objects.get(pk=pk)
         book.delete()

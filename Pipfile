@@ -11,6 +11,10 @@ pillow = "*"
 djangorestframework-stubs = "*"
 drf-spectacular = "*"
 drf-spectacular-sidecar = "*"
+djangorestframework-simplejwt = "*"
+dj-rest-auth = "*"
+django-allauth = "*"
+requests = "*"
 
 [dev-packages]
 
